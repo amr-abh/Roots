@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/amraboulhosn/Desktop/Roots/.claude && echo created)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

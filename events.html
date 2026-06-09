@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Event — Roots Tropical Cocktails</title>
+  <meta name="description" content="Book the Roots tropical bar for birthdays, parties and weddings in Batroun and beyond. Cocktails served in fresh fruit." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/roots_plain_logo_transparent.png" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/roots_logo_transparent.png" alt="Roots Tropical Cocktails" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="brand-fallback" style="display:none">Roots<small>Tropical Cocktails</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="events.html" class="active">Book an Event</a>
+        <a href="index.html#location">Location</a>
+        <!-- <a class="btn btn-primary" href="#booking-form">Book Us</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="menu-hero">
+    <div class="container">
+      <span class="eyebrow">Private Events</span>
+      <h1>Book the Bar</h1>
+      <p class="lead" style="margin:0 auto">Bring the tropics to your celebration. Roots travels to your venue with the full beach-bar setup — cocktails served in fresh pineapples, coconuts and melons.</p>
+    </div>
+  </section>
+
+  <!-- ============ EVENT TYPES ============ -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Perfect For</span>
+      <h2>Any occasion worth toasting</h2>
+      <div class="grid grid-3 event-types" style="margin-top:44px">
+        <div class="card">
+          <div class="icon">🎂</div>
+          <h3>Birthdays</h3>
+          <p>Turn any birthday into a tropical getaway with signature drinks served in the fruit.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎉</div>
+          <h3>Parties</h3>
+          <p>House parties, corporate nights, beach days — we bring the bar, the vibe and the show.</p>
+        </div>
+        <div class="card">
+          <div class="icon">💍</div>
+          <h3>Weddings</h3>
+          <p>A jaw-dropping cocktail moment your guests will photograph all night long.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S INCLUDED ============ -->
+  <section class="section section-soft">
+    <div class="container grid grid-2">
+      <div>
+        <span class="eyebrow">What You Get</span>
+        <h2>The full Roots setup</h2>
+        <ul class="included">
+          <li>Fully styled tropical bar</li>
+          <li>Professional bartenders</li>
+          <li>Cocktails served in fresh fruit</li>
+          <li>Custom drink menu for your event</li>
+          <li>Alcoholic &amp; zero-proof options</li>
+          <li>Fresh fruit, ice &amp; all glassware</li>
+        </ul>
+        <p class="lead" style="margin-top:22px">Packages are tailored to your guest count and location around Batroun and beyond. Send us the details and we'll get back with a quote.</p>
+      </div>
+      <div>
+        <img src="assets/bar.jpg" alt="The Roots tropical bar setup" style="border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow)"
+             onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22440%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231b1916%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%23f5b700%22 font-family=%22sans-serif%22 font-size=%2222%22 text-anchor=%22middle%22>Add assets/bar.jpg</text></svg>'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING FORM ============ -->
+  <section class="section" id="booking-form">
+    <div class="container" style="max-width:760px">
+      <span class="eyebrow">Request a Booking</span>
+      <h2>Tell us about your event</h2>
+      <p class="lead" style="margin-bottom:30px">Fill this in and hit send — it opens WhatsApp with your details ready to go.</p>
+
+      <form id="booking-form" class="booking-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" required placeholder="Full name" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone / WhatsApp</label>
+            <input id="phone" name="phone" type="tel" required placeholder="+961 …" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="eventType">Event type</label>
+            <select id="eventType" name="eventType">
+              <option>Birthday</option>
+              <option>Party</option>
+              <option>Wedding</option>
+              <option>Corporate</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Event date</label>
+            <input id="date" name="date" type="date" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="guests">Approx. guests</label>
+            <input id="guests" name="guests" type="number" min="1" placeholder="e.g. 50" />
+          </div>
+          <div class="field">
+            <label for="location">Event location</label>
+            <input id="location" name="location" type="text" placeholder="Venue / area" />
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="message">Anything else?</label>
+          <textarea id="message" name="message" placeholder="Tell us about your event, drink preferences, theme…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:20px;width:100%;justify-content:center">
+          Send via WhatsApp
+        </button>
+        <p class="form-hint">Prefer Instagram? DM us at
+          <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener" style="color:var(--gold)">@roots.961lb</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="script">Roots</div>
+          <p>Tropical cocktails, served in the fruit. Batroun's beach bar.</p>
+          <div class="social">
+            <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="events.html">Book an Event</a>
+          <a href="index.html#location">Location</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener">@roots.961lb</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span id="year"></span> Roots Tropical Cocktails · Batroun, Lebanon ·
+        <span class="drink-resp">Please drink responsibly · 18+</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
