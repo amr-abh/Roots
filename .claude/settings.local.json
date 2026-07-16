@@ -2,7 +2,25 @@
   "permissions": {
     "allow": [
       "Bash(mkdir -p /Users/amraboulhosn/Desktop/Roots/.claude && echo created)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx -y serve -l 8000 .)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:8000/)",
+      "Bash(curl -s -o /dev/null -w \"menu.html HTTP %{http_code}\\\\n\" http://localhost:8000/menu.html)",
+      "Bash(curl -s -o /dev/null -w \"events.html HTTP %{http_code}\\\\n\" http://localhost:8000/events.html)",
+      "Bash(sed -i '' 's|REPLACE_WITH_YOUR_DOMAIN|roots-cocktails.com|g' index.html menu.html events.html)",
+      "Bash(sed -i '' 's|9610000000|96170579780|' js/main.js)",
+      "Bash(pkill -f \"serve -l 8000\")",
+      "Bash(curl -s -o /dev/null -w \"localhost:8000 -> HTTP %{http_code}\\\\n\" http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s -o /dev/null -w \"index HTTP %{http_code}\\\\n\" http://localhost:8000/)",
+      "Bash(curl -s -o /dev/null -w \"og-image.jpg -> HTTP %{http_code}\\\\n\" http://localhost:8000/assets/og-image.jpg)",
+      "Bash(curl -sIL \"https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic\")",
+      "Bash(curl -s -o /dev/null -w \"menu HTTP %{http_code}\\\\n\" http://localhost:8000/menu.html)",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "Bash(sips --help)",
+      "Bash(pip3 install *)",
+      "Bash(python3)"
     ]
   }
 }

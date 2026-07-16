@@ -11,7 +11,65 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="assets/roots_plain_logo_transparent.png" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/roots_favicon.png" />
+  <link rel="apple-touch-icon" href="assets/roots_favicon.png" />
+
+  <!-- Open Graph / social share (WhatsApp, Facebook, Instagram, iMessage) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Roots Tropical Cocktails" />
+  <meta property="og:title" content="Roots — Tropical Cocktails | Batroun Beach Bar" />
+  <meta property="og:description" content="Tropical cocktails served in the fruit — pineapples, coconuts and melons. Batroun's beach bar." />
+  <meta property="og:url" content="https://roots-cocktails.com/" />
+  <meta property="og:image" content="https://roots-cocktails.com/assets/og-image.png" />
+  <meta property="og:image:alt" content="Roots Tropical Cocktails — Batroun beach bar" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roots — Tropical Cocktails | Batroun Beach Bar" />
+  <meta name="twitter:description" content="Tropical cocktails served in the fruit. Batroun's beach bar." />
+  <meta name="twitter:image" content="https://roots-cocktails.com/assets/og-image.png" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://roots-cocktails.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f5b700" />
+  <meta name="author" content="Roots Tropical Cocktails" />
+  <meta name="keywords" content="Roots, tropical cocktails, Batroun, beach bar, cocktails in a pineapple, coconut cocktails, mobile bar Lebanon, event bar Batroun" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Google Analytics (set your Measurement ID in js/analytics.js) -->
+  <script src="js/analytics.js"></script>
+
+  <!-- Local business structured data (helps Google Search & Maps) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrNightClub",
+    "name": "Roots Tropical Cocktails",
+    "description": "Tropical cocktails served in the fruit — pineapples, coconuts and melons. Batroun's beach bar.",
+    "url": "https://roots-cocktails.com/",
+    "logo": "https://roots-cocktails.com/assets/roots_favicon.png",
+    "image": "https://roots-cocktails.com/assets/og-image.png",
+    "telephone": "+96170579780",
+    "priceRange": "$$",
+    "servesCuisine": "Cocktails",
+    "acceptsReservations": "True",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Batroun",
+      "addressRegion": "North Governorate",
+      "addressCountry": "LB"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 34.2467448, "longitude": 35.6618534 },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "11:00",
+      "closes": "00:00"
+    }],
+    "sameAs": ["https://instagram.com/_roots.lb_"]
+  }
+  </script>
 </head>
 <body>
 
@@ -78,22 +136,15 @@
     </defs>
   </svg>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="assets/roots_logo_transparent.png" alt="Roots Tropical Cocktails" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-        <span class="brand-fallback" style="display:none">Roots<small>Tropical Cocktails</small></span>
-      </a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="events.html">Book an Event</a>
-        <a href="#location">Location</a>
-      </nav>
-    </div>
-  </header>
+  <!-- ============ FLOATING MENU (headerless design) ============ -->
+  <button class="menu-fab" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-overlay" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Book an Event</a>
+    <a href="index.html#location">Location</a>
+    <a class="nav-ig" href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+  </nav>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
@@ -108,17 +159,18 @@
       <div class="hero-copy">
         <h1 class="visually-hidden" style="position:absolute;left:-9999px">Roots Tropical Cocktails</h1>
         <img class="hero-logo-img" src="assets/roots_plain_logo_transparent.png" alt="Roots Tropical Cocktails" data-reveal data-reveal="scale" />
-        <p class="tagline" data-reveal data-reveal-delay="1">Served in the fruit. <br> Batroun's beach bar.</p>
+        <img class="tagline-icon" src="assets/pineapple-icon.png" alt="" aria-hidden="true" data-reveal data-reveal-delay="1" />
+        <p class="tagline" data-reveal data-reveal-delay="1">Taste the Tropics</p>
         <div class="cta-row" data-reveal data-reveal-delay="2">
           <a class="btn btn-primary" href="menu.html">View the Menu</a>
-          <a class="btn btn-ghost" href="events.html">Book the Bar</a>
-          <a class="btn btn-ghost" href="#location">Open in Google Maps</a>
+          <!-- <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic">Open in Google Maps</a>
+          <a class="btn btn-ghost" href="events.html">Book the Bar</a> -->
         </div>
-        <div class="fruit-chips" data-reveal data-reveal-delay="3">
+        <!-- <div class="fruit-chips" data-reveal data-reveal-delay="3">
           <span>🍍 In a pineapple</span>
           <span>🥥 In a coconut</span>
           <span>🍈 In a melon</span>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -222,18 +274,16 @@
         <div data-reveal data-reveal-delay="1">
           <ul class="loc-details">
             <li><strong>Location</strong> Batroun, Lebanon</li>
-            <li><strong>Hours</strong> Open daily — placeholder, update your hours</li>
+            <li><strong>Hours</strong> Open daily · 11 AM – Midnight</li>
+            <li><strong>Phone / WhatsApp</strong> <a href="tel:+96170579780" style="color:var(--gold-deep)">+961 70 579 780</a></li>
             <li><strong>Vibe</strong> Walk-up beach bar &amp; private event bookings</li>
           </ul>
-          <!-- Maps link temporarily removed for preview -->
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic" style="margin-top:6px">Open in Google Maps ↗</a>
         </div>
-        <div class="map-wrap" data-reveal data-reveal-delay="2" style="display:grid;place-items:center;background:var(--bg-soft);color:var(--text-dim)">
-          <!-- Google Maps embed temporarily removed so the local preview works.
-               Re-add this iframe when going live:
-               <iframe src="https://maps.google.com/maps?q=34.2552547,35.6586003&z=15&output=embed"
-                       loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                       title="Roots location in Batroun"></iframe> -->
-          📍 Map embed goes here
+        <div class="map-wrap" data-reveal data-reveal-delay="2">
+          <iframe src="https://maps.google.com/maps?q=34.2467448,35.6618534&z=15&output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  title="Roots location in Batroun"></iframe>
         </div>
       </div>
     </div>
@@ -244,10 +294,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/roots_logo_transparent.png" alt="Roots logo" class="footer-logo" style="height:48px; display:block;" />
+          <img src="assets/roots_plain_logo_transparent.png" alt="Roots Tropical Cocktails" class="footer-logo" style="height:54px; width:auto; display:block;" />
           <p>Tropical cocktails, served in the fruit. Batroun's beach bar.</p>
           <div class="social">
-            <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener" aria-label="Instagram">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
@@ -263,7 +313,13 @@
         </div>
         <div class="footer-col">
           <h4>Follow</h4>
-          <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener">@roots.961lb</a>
+          <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <a href="tel:+96170579780">+961 70 579 780</a>
+          <a href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic" target="_blank" rel="noopener">Batroun, Lebanon</a>
+          <a href="index.html#location">Open daily · 11 AM–Midnight</a>
         </div>
       </div>
       <div class="footer-bottom">

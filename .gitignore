@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Editor / OS junk
+Thumbs.db
+*.swp
+
+# Dependencies (if you ever add a build step)
+node_modules/

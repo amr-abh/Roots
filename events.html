@@ -10,7 +10,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="assets/roots_plain_logo_transparent.png" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/roots_favicon.png" />
+  <link rel="apple-touch-icon" href="assets/roots_favicon.png" />
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Roots Tropical Cocktails" />
+  <meta property="og:title" content="Book an Event — Roots Tropical Cocktails" />
+  <meta property="og:description" content="Book the Roots tropical bar for birthdays, parties and weddings in Batroun. Cocktails served in fresh fruit." />
+  <meta property="og:url" content="https://roots-cocktails.com/events.html" />
+  <meta property="og:image" content="https://roots-cocktails.com/assets/og-image.png" />
+  <meta property="og:image:alt" content="Roots Tropical Cocktails — Batroun beach bar" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book an Event — Roots Tropical Cocktails" />
+  <meta name="twitter:description" content="Book the Roots tropical bar for birthdays, parties and weddings in Batroun." />
+  <meta name="twitter:image" content="https://roots-cocktails.com/assets/og-image.png" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://roots-cocktails.com/events.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f5b700" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Google Analytics (set your Measurement ID in js/analytics.js) -->
+  <script src="js/analytics.js"></script>
 </head>
 <body>
 
@@ -50,30 +75,22 @@
     </defs>
   </svg>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="assets/roots_logo_transparent.png" alt="Roots Tropical Cocktails" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-        <span class="brand-fallback" style="display:none">Roots<small>Tropical Cocktails</small></span>
-      </a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="events.html" class="active">Book an Event</a>
-        <a href="index.html#location">Location</a>
-        <!-- <a class="btn btn-primary" href="#booking-form">Book Us</a> -->
-      </nav>
-    </div>
-  </header>
+  <!-- ============ FLOATING MENU (headerless design) ============ -->
+  <button class="menu-fab" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-overlay" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Book an Event</a>
+    <a href="index.html#location">Location</a>
+    <a class="nav-ig" href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+  </nav>
 
   <!-- ============ HERO ============ -->
   <section class="menu-hero">
     <div class="float-layer">
       <svg class="float-fruit" style="top:6%; left:5%; width:92px; height:92px" data-speed="0.18" data-spin="-14"><use href="#ic-coconut"/></svg>
       <svg class="float-fruit" style="bottom:8%; right:6%; width:96px; height:147px" data-speed="0.2" data-spin="14"><use href="#ic-pineapple"/></svg>
-      <svg class="float-fruit" style="top:24%; left:14%; width:60px; height:60px" data-speed="0.1" data-spin="10"><use href="#ic-leaf"/></svg>
+      <svg class="float-fruit" style="bottom:10%; left:5%; width:64px; height:64px" data-speed="0.1" data-spin="10"><use href="#ic-leaf"/></svg>
     </div>
     <div class="container">
       <span class="eyebrow" data-reveal>Private Events</span>
@@ -131,7 +148,7 @@
   </section>
 
   <!-- ============ BOOKING FORM ============ -->
-  <section class="section" id="booking-form">
+  <section class="section" id="booking">
     <div class="container" style="max-width:760px">
       <span class="eyebrow">Request a Booking</span>
       <h2>Tell us about your event</h2>
@@ -186,7 +203,7 @@
           Send via WhatsApp
         </button>
         <p class="form-hint">Prefer Instagram? DM us at
-          <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener" style="color:var(--gold)">@roots.961lb</a>.</p>
+          <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener" style="color:var(--gold)">@_roots.lb_</a>.</p>
       </form>
     </div>
   </section>
@@ -196,10 +213,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="script">Roots</div>
+          <img src="assets/roots_plain_logo_transparent.png" alt="Roots Tropical Cocktails" class="footer-logo" style="height:54px; width:auto; display:block;" />
           <p>Tropical cocktails, served in the fruit. Batroun's beach bar.</p>
           <div class="social">
-            <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener" aria-label="Instagram">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
@@ -215,7 +232,13 @@
         </div>
         <div class="footer-col">
           <h4>Follow</h4>
-          <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener">@roots.961lb</a>
+          <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <a href="tel:+96170579780">+961 70 579 780</a>
+          <a href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic" target="_blank" rel="noopener">Batroun, Lebanon</a>
+          <a href="index.html#location">Open daily · 11 AM–Midnight</a>
         </div>
       </div>
       <div class="footer-bottom">

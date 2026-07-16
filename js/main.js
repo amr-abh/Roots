@@ -1,6 +1,6 @@
 /* Roots — shared scripts */
 
-/* ---- mobile nav toggle ---- */
+/* ---- mobile nav toggle (shared header on menu/events pages) ---- */
 (function () {
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
@@ -9,11 +9,30 @@
   }
 })();
 
+/* ---- floating menu (headerless design on the home page) ---- */
+(function () {
+  const fab = document.querySelector(".menu-fab");
+  const overlay = document.querySelector(".nav-overlay");
+  if (!fab || !overlay) return;
+
+  const setOpen = (open) => {
+    fab.classList.toggle("open", open);
+    overlay.classList.toggle("open", open);
+    fab.setAttribute("aria-expanded", String(open));
+    overlay.setAttribute("aria-hidden", String(!open));
+    document.body.style.overflow = open ? "hidden" : "";
+  };
+
+  fab.addEventListener("click", () => setOpen(!overlay.classList.contains("open")));
+  overlay.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+})();
+
 /* ---- booking form -> WhatsApp message ----
    No backend needed: we build a pre-filled WhatsApp message and open it.
    >>> Replace BOOKING_WHATSAPP with your real number (international format,
        digits only, e.g. Lebanon +961 71 234 567 -> "96171234567").       */
-const BOOKING_WHATSAPP = "9610000000"; // TODO: replace with Roots' real number
+const BOOKING_WHATSAPP = "96170579780"; // Roots' WhatsApp number (+961 70 579 780)
 
 (function () {
   const form = document.querySelector("#booking-form");

@@ -10,7 +10,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="assets/roots_plain_logo_transparent.png" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/roots_favicon.png" />
+  <link rel="apple-touch-icon" href="assets/roots_favicon.png" />
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Roots Tropical Cocktails" />
+  <meta property="og:title" content="Menu — Roots Tropical Cocktails" />
+  <meta property="og:description" content="Cocktails and mocktails served inside fresh pineapples, coconuts and melons in Batroun." />
+  <meta property="og:url" content="https://roots-cocktails.com/menu.html" />
+  <meta property="og:image" content="https://roots-cocktails.com/assets/og-image.png" />
+  <meta property="og:image:alt" content="Roots Tropical Cocktails — Batroun beach bar" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menu — Roots Tropical Cocktails" />
+  <meta name="twitter:description" content="Cocktails and mocktails served inside fresh fruit in Batroun." />
+  <meta name="twitter:image" content="https://roots-cocktails.com/assets/og-image.png" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://roots-cocktails.com/menu.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f5b700" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Google Analytics (set your Measurement ID in js/analytics.js) -->
+  <script src="js/analytics.js"></script>
 </head>
 <body>
 
@@ -50,23 +75,15 @@
     </defs>
   </svg>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <img src="assets/roots_logo_transparent.png" alt="Roots Tropical Cocktails" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-        <span class="brand-fallback" style="display:none">Roots<small>Tropical Cocktails</small></span>
-      </a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="menu.html" class="active">Menu</a>
-        <a href="events.html">Book an Event</a>
-        <a href="index.html#location">Location</a>
-        <!-- <a class="btn btn-primary" href="events.html">Book Us</a> -->
-      </nav>
-    </div>
-  </header>
+  <!-- ============ FLOATING MENU (headerless design) ============ -->
+  <button class="menu-fab" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-overlay" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Book an Event</a>
+    <a href="index.html#location">Location</a>
+    <a class="nav-ig" href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+  </nav>
 
   <!-- ============ MENU HERO ============ -->
   <section class="menu-hero">
@@ -86,6 +103,27 @@
   <section class="section">
     <div class="container">
 
+      <!-- TROPICAL TRIO SAMPLER -->
+      <div class="menu-cat">
+        <div class="menu-cat-head" data-reveal>
+          <span class="emoji">🎉</span>
+          <h2>The Tropical Trio</h2>
+          <span class="rule"></span>
+        </div>
+        <div class="menu-item" data-reveal>
+          <h3>The Tropical Trio <span class="tag">Sampler for the Table</span></h3>
+          <div class="menu-prices">
+            <div class="pp"><div class="amt">$35</div></div>
+          </div>
+          <p>One watermelon, one coconut and one pineapple — each filled with any cocktail or mocktail from our menu, your choice. The perfect way to taste it all, made for sharing.</p>
+          <div class="fruit-chips" style="justify-content:flex-start; margin-top:14px">
+            <span>🍉 Watermelon</span>
+            <span>🥥 Coconut</span>
+            <span>🍍 Pineapple</span>
+          </div>
+        </div>
+      </div>
+
       <!-- COCKTAILS -->
       <div class="menu-cat">
         <div class="menu-cat-head" data-reveal>
@@ -94,15 +132,19 @@
           <span class="rule"></span>
         </div>
         <div class="price-legend">
-          <div class="pp"><span>🥤 In a cup</span></div>
-          <div class="pp"><span>🍍 In a fruit</span></div>
+          <div class="pp"><span>🥤 Cup</span></div>
+          <div class="pp"><span>🍉 Melon</span></div>
+          <div class="pp"><span>🥥 Coconut</span></div>
+          <div class="pp"><span>🍍 Pineapple</span></div>
         </div>
 
         <div class="menu-item" data-reveal>
           <h3>Coconut Bliss</h3>
           <div class="menu-prices">
             <div class="pp"><div class="amt">$8</div></div>
-            <div class="pp"><div class="amt">$13</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$14</div></div>
           </div>
           <p>Our signature coconut cream and homemade pineapples, blended and served with maté-infused rum.</p>
         </div>
@@ -110,7 +152,9 @@
           <h3>Blossom Babe</h3>
           <div class="menu-prices">
             <div class="pp"><div class="amt">$8</div></div>
-            <div class="pp"><div class="amt">$13</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$14</div></div>
           </div>
           <p>Our handcrafted lime-strawberry mix and fresh melons, blended and served with our orange-blossom-infused vodka.</p>
         </div>
@@ -118,7 +162,9 @@
           <h3>Pineapple Paradise <span class="tag">Sugar-Free</span></h3>
           <div class="menu-prices">
             <div class="pp"><div class="amt">$8</div></div>
-            <div class="pp"><div class="amt">$13</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$14</div></div>
           </div>
           <p>Our fresh pineapples blended over ice with our agave-infused gin (sugar-free).</p>
         </div>
@@ -126,7 +172,9 @@
           <h3>Piña Colada</h3>
           <div class="menu-prices">
             <div class="pp"><div class="amt">$8</div></div>
-            <div class="pp"><div class="amt">$13</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$14</div></div>
           </div>
           <p>Our homemade piña colada mix, blended and served with your choice of liquor.</p>
         </div>
@@ -134,7 +182,9 @@
           <h3>Strawberry Daiquiri</h3>
           <div class="menu-prices">
             <div class="pp"><div class="amt">$8</div></div>
-            <div class="pp"><div class="amt">$13</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$14</div></div>
           </div>
           <p>Our strawberry daiquiri mix, blended and served with your choice of liquor.</p>
         </div>
@@ -142,7 +192,9 @@
           <h3>Roots 961 <span class="tag">Signature</span></h3>
           <div class="menu-prices">
             <div class="pp"><div class="amt">$9</div></div>
-            <div class="pp"><div class="amt">$14</div></div>
+            <div class="pp"><div class="amt">$13</div></div>
+            <div class="pp"><div class="amt">$13</div></div>
+            <div class="pp"><div class="amt">$15</div></div>
           </div>
           <p>Both our Coconut Bliss and Blossom Babe mixed into one — the perfect tropical half &amp; half.</p>
         </div>
@@ -156,15 +208,19 @@
           <span class="rule"></span>
         </div>
         <div class="price-legend">
-          <div class="pp"><span>🥤 In a cup</span></div>
-          <div class="pp"><span>🍍 In a fruit</span></div>
+          <div class="pp"><span>🥤 Cup</span></div>
+          <div class="pp"><span>🍉 Melon</span></div>
+          <div class="pp"><span>🥥 Coconut</span></div>
+          <div class="pp"><span>🍍 Pineapple</span></div>
         </div>
 
         <div class="menu-item" data-reveal>
           <h3>Any cocktail, virgin</h3>
           <div class="menu-prices">
             <div class="pp"><div class="amt">$7</div></div>
-            <div class="pp"><div class="amt">$12</div></div>
+            <div class="pp"><div class="amt">$11</div></div>
+            <div class="pp"><div class="amt">$11</div></div>
+            <div class="pp"><div class="amt">$13</div></div>
           </div>
           <p>All of our cocktails can be made virgin / alcohol-free — same tropical flavors, zero proof.</p>
         </div>
@@ -194,7 +250,7 @@
         </div>
       </div>
 
-      <p class="menu-note">Prices in USD. Follow <a href="https://instagram.com/roots.961lb" style="color:var(--gold)">@roots.961lb</a> for new drops &amp; specials.</p>
+      <p class="menu-note">Prices in USD. Follow <a href="https://instagram.com/_roots.lb_" style="color:var(--gold)">@_roots.lb_</a> for new drops &amp; specials.</p>
     </div>
   </section>
 
@@ -203,10 +259,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="script">Roots</div>
+          <img src="assets/roots_plain_logo_transparent.png" alt="Roots Tropical Cocktails" class="footer-logo" style="height:54px; width:auto; display:block;" />
           <p>Tropical cocktails, served in the fruit. Batroun's beach bar.</p>
           <div class="social">
-            <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener" aria-label="Instagram">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
@@ -222,7 +278,13 @@
         </div>
         <div class="footer-col">
           <h4>Follow</h4>
-          <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener">@roots.961lb</a>
+          <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <a href="tel:+96170579780">+961 70 579 780</a>
+          <a href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic" target="_blank" rel="noopener">Batroun, Lebanon</a>
+          <a href="index.html#location">Open daily · 11 AM–Midnight</a>
         </div>
       </div>
       <div class="footer-bottom">
