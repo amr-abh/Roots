@@ -11,69 +11,194 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="assets/roots_plain_logo_transparent.png" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/roots_favicon.png" />
+  <link rel="apple-touch-icon" href="assets/roots_favicon.png" />
+
+  <!-- Open Graph / social share (WhatsApp, Facebook, Instagram, iMessage) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Roots Tropical Cocktails" />
+  <meta property="og:title" content="Roots — Tropical Cocktails | Batroun Beach Bar" />
+  <meta property="og:description" content="Tropical cocktails served in the fruit — pineapples, coconuts and melons. Batroun's beach bar." />
+  <meta property="og:url" content="https://roots-cocktails.com/" />
+  <meta property="og:image" content="https://roots-cocktails.com/assets/og-image.png" />
+  <meta property="og:image:alt" content="Roots Tropical Cocktails — Batroun beach bar" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roots — Tropical Cocktails | Batroun Beach Bar" />
+  <meta name="twitter:description" content="Tropical cocktails served in the fruit. Batroun's beach bar." />
+  <meta name="twitter:image" content="https://roots-cocktails.com/assets/og-image.png" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://roots-cocktails.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f5b700" />
+  <meta name="author" content="Roots Tropical Cocktails" />
+  <meta name="keywords" content="Roots, tropical cocktails, Batroun, beach bar, cocktails in a pineapple, coconut cocktails, mobile bar Lebanon, event bar Batroun" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Google Analytics (set your Measurement ID in js/analytics.js) -->
+  <script src="js/analytics.js"></script>
+
+  <!-- Local business structured data (helps Google Search & Maps) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrNightClub",
+    "name": "Roots Tropical Cocktails",
+    "description": "Tropical cocktails served in the fruit — pineapples, coconuts and melons. Batroun's beach bar.",
+    "url": "https://roots-cocktails.com/",
+    "logo": "https://roots-cocktails.com/assets/roots_favicon.png",
+    "image": "https://roots-cocktails.com/assets/og-image.png",
+    "telephone": "+96170579780",
+    "priceRange": "$$",
+    "servesCuisine": "Cocktails",
+    "acceptsReservations": "True",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Batroun",
+      "addressRegion": "North Governorate",
+      "addressCountry": "LB"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 34.2467448, "longitude": 35.6618534 },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "11:00",
+      "closes": "00:00"
+    }],
+    "sameAs": ["https://instagram.com/_roots.lb_"]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <!-- Drop your logo at assets/logo.png and it shows here -->
-        <img src="assets/roots_logo_transparent.png" alt="Roots Tropical Cocktails" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
-        <span class="brand-fallback" style="display:none">Roots<small>Tropical Cocktails</small></span>
-      </a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="events.html">Book an Event</a>
-        <a href="#location">Location</a>
-        <!-- <a class="btn btn-primary" href="events.html">Book Us</a> -->
-      </nav>
-    </div>
-  </header>
+  <!-- ============ SVG FRUIT DEFINITIONS (hidden) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="pineGrad" cx="38%" cy="32%" r="78%">
+        <stop offset="0%" stop-color="#ffd964"/>
+        <stop offset="58%" stop-color="#f5b700"/>
+        <stop offset="100%" stop-color="#dd9e00"/>
+      </radialGradient>
+      <radialGradient id="cocoGrad" cx="36%" cy="32%" r="74%">
+        <stop offset="0%" stop-color="#9a663180"/>
+        <stop offset="0%" stop-color="#8a5a2b"/>
+        <stop offset="68%" stop-color="#6b4423"/>
+        <stop offset="100%" stop-color="#4a2d15"/>
+      </radialGradient>
+      <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#3aa657"/>
+        <stop offset="100%" stop-color="#1d5e29"/>
+      </linearGradient>
+
+      <!-- pineapple -->
+      <symbol id="ic-pineapple" viewBox="0 0 120 184">
+        <g fill="#2f8f3e">
+          <path d="M60 4 C52 28 49 46 58 66 L62 66 C71 46 68 28 60 4Z"/>
+          <path d="M58 64 C36 46 28 42 18 28 C40 34 54 44 60 64Z"/>
+          <path d="M62 64 C84 46 92 42 102 28 C80 34 66 44 60 64Z"/>
+        </g>
+        <g fill="#3aa657">
+          <path d="M58 68 C42 58 30 60 22 54 C40 58 52 62 60 70Z"/>
+          <path d="M62 68 C78 58 90 60 98 54 C80 58 68 62 60 70Z"/>
+        </g>
+        <ellipse cx="60" cy="122" rx="46" ry="58" fill="url(#pineGrad)"/>
+        <clipPath id="pineClip"><ellipse cx="60" cy="122" rx="46" ry="58"/></clipPath>
+        <g clip-path="url(#pineClip)" stroke="#c9920a" stroke-width="2.3" opacity=".5" fill="none" stroke-linecap="round">
+          <path d="M-24 92 L120 -8 M-24 122 L120 22 M-24 152 L120 52 M-24 182 L120 82 M-24 212 L120 112"/>
+          <path d="M0 -8 L150 132 M0 22 L150 162 M0 52 L150 192 M0 82 L150 222"/>
+        </g>
+        <ellipse cx="44" cy="106" rx="9" ry="20" fill="#ffffff" opacity=".22"/>
+      </symbol>
+
+      <!-- coconut -->
+      <symbol id="ic-coconut" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="52" fill="url(#cocoGrad)"/>
+        <g stroke="#5a3618" stroke-width="2" fill="none" opacity=".4" stroke-linecap="round">
+          <path d="M22 46 Q60 36 98 50"/>
+          <path d="M18 64 Q60 58 102 66"/>
+          <path d="M24 84 Q60 94 96 80"/>
+        </g>
+        <g fill="#3a2412">
+          <ellipse cx="48" cy="52" rx="5" ry="6"/>
+          <ellipse cx="72" cy="52" rx="5" ry="6"/>
+          <ellipse cx="60" cy="70" rx="5" ry="6"/>
+        </g>
+        <ellipse cx="44" cy="42" rx="13" ry="18" fill="#ffffff" opacity=".12"/>
+      </symbol>
+
+      <!-- monstera leaf -->
+      <symbol id="ic-leaf" viewBox="0 0 120 120">
+        <path fill="url(#leafGrad)" d="M60 8 C30 20 14 50 18 92 C19 106 27 114 37 111 C30 92 35 70 49 56 C45 75 47 93 59 106 C71 93 73 75 69 56 C83 70 88 92 81 111 C91 114 99 106 100 92 C104 50 88 20 60 8 Z"/>
+        <path stroke="#10421c" stroke-width="2" opacity=".5" fill="none" d="M60 14 L60 104"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ FLOATING MENU (headerless design) ============ -->
+  <button class="menu-fab" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-overlay" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Book an Event</a>
+    <a href="index.html#location">Location</a>
+    <a class="nav-ig" href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+  </nav>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
+    <!-- <div class="float-layer">
+      <svg class="float-fruit" style="top:8%; right:7%; width:150px; height:230px" data-speed="0.22" data-spin="14"><use href="#ic-pineapple"/></svg>
+      <svg class="float-fruit" style="bottom:14%; left:6%; width:130px; height:130px" data-speed="0.16" data-spin="-12"><use href="#ic-coconut"/></svg>
+      <svg class="float-fruit" style="top:18%; left:10%; width:88px; height:88px" data-speed="0.10" data-spin="10"><use href="#ic-leaf"/></svg>
+      <svg class="float-fruit" style="bottom:22%; right:14%; width:74px; height:74px" data-speed="0.28" data-spin="-16"><use href="#ic-coconut"/></svg>
+    </div> -->
+
     <div class="hero-grid">
       <div class="hero-copy">
         <h1 class="visually-hidden" style="position:absolute;left:-9999px">Roots Tropical Cocktails</h1>
-        <img class="hero-logo-img" src="assets/roots_plain_logo_transparent.png" alt="Roots Tropical Cocktails" />
-        <p class="tagline">Served in the fruit. <br> Batroun's beach bar.</p>
-        <div class="cta-row">
-          <a class="btn btn-ghost" href="">Open in Google Maps</a>
+        <img class="hero-logo-img" src="assets/roots_plain_logo_transparent.png" alt="Roots Tropical Cocktails" data-reveal data-reveal="scale" />
+        <img class="tagline-icon" src="assets/pineapple-icon.png" alt="" aria-hidden="true" data-reveal data-reveal-delay="1" />
+        <p class="tagline" data-reveal data-reveal-delay="1">Taste the Tropics</p>
+        <div class="cta-row" data-reveal data-reveal-delay="2">
           <a class="btn btn-primary" href="menu.html">View the Menu</a>
-          <a class="btn btn-ghost" href="events.html">Book the Bar</a>
+          <!-- <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic">Open in Google Maps</a>
+          <a class="btn btn-ghost" href="events.html">Book the Bar</a> -->
         </div>
-        <div class="fruit-chips">
+        <!-- <div class="fruit-chips" data-reveal data-reveal-delay="3">
           <span>🍍 In a pineapple</span>
           <span>🥥 In a coconut</span>
           <span>🍈 In a melon</span>
-        </div>
+        </div> -->
       </div>
     </div>
+
+    <a class="scroll-cue" href="#concept" aria-label="Scroll down">
+      <span class="mouse"></span>
+      <span>Scroll</span>
+    </a>
   </section>
 
   <!-- ============ CONCEPT ============ -->
   <section class="section" id="concept">
     <div class="container">
-      <span class="eyebrow floral-eyebrow">The Concept</span>
-      <h2>Drinks straight from the tropics</h2>
-      <p class="lead">Roots is a tropical bar in Batroun built around one simple idea — your cocktail belongs <em>inside</em> the fruit. We hollow out fresh pineapples, coconuts and melons and fill them with handcrafted cocktails. It looks unreal, it tastes better, and it's the kind of drink people photograph before the first sip.</p>
+      <span class="eyebrow" data-reveal>The Concept</span>
+      <h2 data-reveal data-reveal-delay="1">Drinks straight from the <span class="grad">tropics</span></h2>
+      <p class="lead" data-reveal data-reveal-delay="2">Roots is a tropical bar in Batroun built around one simple idea — your cocktail belongs <em>inside</em> the fruit. We hollow out fresh pineapples, coconuts and melons and fill them with handcrafted cocktails. It looks unreal, it tastes better, and it's the kind of drink people photograph before the first sip.</p>
 
       <div class="grid grid-3" style="margin-top:48px">
-        <div class="card">
+        <div class="card" data-reveal data-reveal-delay="1">
           <div class="icon">🍹</div>
           <h3>Served in the fruit</h3>
           <p>Every signature drink comes inside a real pineapple, coconut or melon — no plastic cups, all tropical.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal data-reveal-delay="2">
           <div class="icon">🌿</div>
           <h3>Fresh &amp; handcrafted</h3>
           <p>Fresh juices, real fruit and quality spirits, mixed to order. Zero shortcuts.</p>
         </div>
-        <div class="card">
+        <div class="card" data-reveal data-reveal-delay="3">
           <div class="icon">🌅</div>
           <h3>Beach-bar vibes</h3>
           <p>Tiki energy, warm lights and tropical greens — Batroun's most photogenic spot for a drink.</p>
@@ -82,46 +207,83 @@
     </div>
   </section>
 
-  <div class="container"><div class="floral-divider">🌴 🌺 🌴</div></div>
+  <!-- ============ STATEMENT BAND (parallax) ============ -->
+  <section class="statement section-soft">
+    <div class="float-layer">
+      <svg class="float-fruit" style="top:6%; left:4%; width:120px; height:184px" data-speed="0.30" data-spin="18"><use href="#ic-pineapple"/></svg>
+      <svg class="float-fruit" style="bottom:8%; right:6%; width:120px; height:120px" data-speed="0.24" data-spin="-18"><use href="#ic-coconut"/></svg>
+      <svg class="float-fruit" style="top:20%; right:16%; width:70px; height:70px" data-speed="0.14" data-spin="12"><use href="#ic-leaf"/></svg>
+    </div>
+    <div class="container">
+      <h2 data-reveal>Every drink is a <span class="grad">little vacation</span>.</h2>
+      <p class="lead" data-reveal data-reveal-delay="1" style="margin-left:auto;margin-right:auto;text-align:center">Crack open a coconut, sip from a pineapple, and let Batroun feel like the Caribbean for a night.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow" data-reveal>How it works</span>
+      <h2 data-reveal data-reveal-delay="1">From fruit to <span class="grad">fingertips</span></h2>
+      <div class="steps">
+        <div class="step" data-reveal data-reveal-delay="1">
+          <span class="num">01</span>
+          <h3>Pick your fruit</h3>
+          <p>Choose your vessel — a whole pineapple, a fresh coconut or a ripe melon.</p>
+        </div>
+        <div class="step" data-reveal data-reveal-delay="2">
+          <span class="num">02</span>
+          <h3>We craft it</h3>
+          <p>Our bartenders blend fresh juices and quality spirits, then pour it straight into the fruit.</p>
+        </div>
+        <div class="step" data-reveal data-reveal-delay="3">
+          <span class="num">03</span>
+          <h3>You sip &amp; snap</h3>
+          <p>Grab your straw, take the photo, and enjoy the most tropical drink in town.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ SHOWCASE / IMAGE ============ -->
   <section class="section section-soft botanic">
-    <div class="container grid grid-2">
-      <div>
-        <span class="eyebrow floral-eyebrow">The Bar</span>
-        <h2>Tropical, top to bottom</h2>
+    <div class="float-layer">
+      <svg class="float-fruit" style="top:10%; right:3%; width:96px; height:96px" data-speed="0.2" data-spin="-14"><use href="#ic-coconut"/></svg>
+    </div>
+    <div class="container">
+      <div data-reveal style="max-width:640px">
+        <span class="eyebrow">The Bar</span>
+        <h2>Tropical, <span class="grad">top to bottom</span></h2>
         <p class="lead">From the thatched roof to the baskets of fresh fruit out front, every detail of Roots is built to feel like a getaway. Pull up, grab a pineapple full of cocktail, and stay a while.</p>
         <a class="btn btn-primary" href="menu.html" style="margin-top:22px">See what's pouring</a>
       </div>
-      <div>
-        <!-- Drop your bar photo at assets/bar.jpg -->
-        <img src="assets/bar.jpg" alt="The Roots tropical bar" style="border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow)"
-             onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22420%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231b1916%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%23f5b700%22 font-family=%22sans-serif%22 font-size=%2222%22 text-anchor=%22middle%22>Add assets/bar.jpg</text></svg>'" />
+      <!-- Bar photo hidden until a real photo is added at assets/bar.jpg — then restore the grid-2 column below:
+      <div data-reveal data-reveal-delay="2" data-reveal="scale">
+        <img src="assets/bar.jpg" alt="The Roots tropical bar" style="border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow)" />
       </div>
+      -->
     </div>
   </section>
 
   <!-- ============ LOCATION ============ -->
   <section class="section" id="location">
     <div class="container">
-      <span class="eyebrow floral-eyebrow">Find Us</span>
-      <h2>Where to find Roots</h2>
+      <span class="eyebrow" data-reveal>Find Us</span>
+      <h2 data-reveal data-reveal-delay="1">Where to find <span class="grad">Roots</span></h2>
       <div class="grid grid-2" style="margin-top:36px">
-        <div>
+        <div data-reveal data-reveal-delay="1">
           <ul class="loc-details">
             <li><strong>Location</strong> Batroun, Lebanon</li>
-            <li><strong>Hours</strong> Open daily — placeholder, update your hours</li>
+            <li><strong>Hours</strong> Open daily · 11 AM – Midnight</li>
+            <li><strong>Phone / WhatsApp</strong> <a href="tel:+96170579780" style="color:var(--gold-deep)">+961 70 579 780</a></li>
             <li><strong>Vibe</strong> Walk-up beach bar &amp; private event bookings</li>
           </ul>
-          <!-- Maps link temporarily removed for preview -->
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic" style="margin-top:6px">Open in Google Maps ↗</a>
         </div>
-        <div class="map-wrap" style="display:grid;place-items:center;background:var(--bg-soft);color:var(--text-dim)">
-          <!-- Google Maps embed temporarily removed so the local preview works.
-               Re-add this iframe when going live:
-               <iframe src="https://maps.google.com/maps?q=34.2552547,35.6586003&z=15&output=embed"
-                       loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                       title="Roots location in Batroun"></iframe> -->
-          📍 Map embed goes here
+        <div class="map-wrap" data-reveal data-reveal-delay="2">
+          <iframe src="https://maps.google.com/maps?q=34.2467448,35.6618534&z=15&output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  title="Roots location in Batroun"></iframe>
         </div>
       </div>
     </div>
@@ -132,12 +294,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/roots_logo_transparent.png" alt="Roots logo" class="footer-logo" style="height:48px; display:block;" />
-    
+          <img src="assets/roots_plain_logo_transparent.png" alt="Roots Tropical Cocktails" class="footer-logo" style="height:54px; width:auto; display:block;" />
           <p>Tropical cocktails, served in the fruit. Batroun's beach bar.</p>
           <div class="social">
-            <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener" aria-label="Instagram">
-              <!-- instagram glyph -->
+            <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener" aria-label="Instagram">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
@@ -153,7 +313,13 @@
         </div>
         <div class="footer-col">
           <h4>Follow</h4>
-          <a href="https://instagram.com/roots.961lb" target="_blank" rel="noopener">@roots.961lb</a>
+          <a href="https://instagram.com/_roots.lb_" target="_blank" rel="noopener">@_roots.lb_</a>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <a href="tel:+96170579780">+961 70 579 780</a>
+          <a href="https://maps.app.goo.gl/afByAEG6NxBrupbw6?g_st=ic" target="_blank" rel="noopener">Batroun, Lebanon</a>
+          <a href="index.html#location">Open daily · 11 AM–Midnight</a>
         </div>
       </div>
       <div class="footer-bottom">
