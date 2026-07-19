@@ -1,12 +1,11 @@
 /* Google Analytics 4 (GA4) loader for Roots
    ------------------------------------------------------------------
-   1. Create a GA4 property at https://analytics.google.com
-   2. Copy your Measurement ID (looks like "G-ABCD1234EF")
-   3. Paste it below, replacing G-XXXXXXXXXX
-   Until a real ID is set, this file does nothing — no tracking,
-   no cookies (so local previews stay clean).                       */
+   GA_ID is the GA4 Measurement ID for the roots-cocktails.com property.
+   To point at a different property, swap the value below.
+   If the ID is ever cleared or left as a placeholder, this file does
+   nothing — no tracking, no cookies.                                 */
 (function () {
-  var GA_ID = "G-XXXXXXXXXX"; // <-- replace with your GA4 Measurement ID
+  var GA_ID = "G-QZJWJMY7BB"; // GA4 Measurement ID for roots-cocktails.com
 
   if (!GA_ID || GA_ID.indexOf("XXXX") !== -1) return; // not configured yet
 
